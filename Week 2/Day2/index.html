@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>the sum of 10 and 5 is {{10+5}}</h1>
+    <h1>10 greater than  5 is {{10>5}}</h1>
+    <br><br>
+    <!-- //object properties acessing -->
+    <div ng-controller="mycntrl as ctrl">
+        {{ctrl.name+" "+ctrl.age}}
+    </div>
+    <br><br>
+    <!-- function accesing -->
+    <div ng-controller="cntrl1 as ctrl1">
+        {{ctrl1.sum()}}
+        <h1>{{ctrl1.prod()}}</h1>
+    </div>
+    <br><br>
+    <!-- array acessing -->
+    <div ng-controller="cntrl2" >
+        {{fname+" "+lname}} <br>
+        {{cal(10,5)}} <br>
+        {{obj.name+" "+obj.age}} <br>
+        {{arr[0]+arr[1]}} <br>
+    </div>
+    <br><br>
+   <!-- scope acessing -->
+    <div ng-controller="cntrl3">
+        {{product}}
+    </div>
+    <br><br>
+     <!-- directive testing -->
+    <div test-directive></div>
+    <br><br>
+    <!-- button clicking to print hi  -->
+    <div ng-controller="cntrl4">
+        <button ng-click="hi()">click me</button>
+        <h3>{{greet}}</h3>   
+    </div>
+    <br><br>
+    <div test2-directive></div>
+    <br><br>
+    <!-- take input from input and displaying -->
+    <div>
+        <p>Name: <input type="text" ng-model="name"></p>
+        <p>you wrote:{{name}}</p>
+    </div>
+    <div ng-init="quantity=1;price=9">
+        Quantity: <input type="number" ng-model="quantity"><br><br>
+        Price: <input type="number" ng-model="price">
+        <h3>The quantity {{quantity}}* price {{price}} = {{quantity*price}}</h3>
+    </div>
+
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
