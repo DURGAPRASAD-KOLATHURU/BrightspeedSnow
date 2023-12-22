@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "sample">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>uppercase | lowercase  </h3>
+    <div ng-controller="casefilter">
+        Data : {{message | uppercase }}
+        Data : {{message | lowercase}}
+        Date : {{date | date : "dd-MM-yyyy"}}
+        Currency : {{amount | currency}}
+        Rupees : {{amount | currency : 'INR'}}
+    </div>
+    <h3>filter countries by using search bar</h3>
+    <div ng-controller="searchsort">
+        <input type="text" ng-model="value"><button ng-click="show(value)">Submit</button>
+        <h4>countries</h4>
+        <select >
+            <option  ng-repeat="d in data | filter:value" >{{d.country }} </option>
+        </select>
+    </div>
+    
+    <h3>sorting by selecting name and country</h3>
+    <div ng-controller="tablesort">
+        <table border="solid 2px">
+            <tr>
+                <th ng-click="orderByme('name')">Name</th>
+                <th ng-click="orderByme('country')">Country</th>
+            </tr>
+            <tr ng-repeat="d in data | orderBy:value:true">
+                <td>{{d.name }}</td>
+                <td>{{d.country }}</td>
+            </tr>
+        </table>
+    </div>
+    <div ng-controller="user">
+        <h1>Hello My name is {{userName}}</h1>
+        <p>My friend Name is {{FriendName}}</p>
+        <div ng-controller="userFriend">
+            <h1>Hello My name is {{userName}}</h1>
+            <p>My friend Name is {{FriendName}}</p>
+            <p>my adress is {{userAddress}}</p>
+            <p>my friend adress is {{FriendAddress}}</p>
+        </div>
+        <h1>Hello My name is {{userName}}</h1>
+        <p>my friend adress is {{FriendAddress}}</p>
+    </div>
+    <div>
+        <ul ng-controller="namesCtrl">
+            <li ng-repeat="x in names">
+                {{x | durga}}
+              </li>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

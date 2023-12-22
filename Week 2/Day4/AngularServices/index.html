@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Getting and posting data using services</h1>
+    <div ng-controller="cntrl">
+        <ul>
+            <li ng-repeat="no in arr">{{no}}</li>
+        </ul>
+        <button ng-click="getData()">GetData</button>
+        <button ng-click="sendData(3)">SendData</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="./controller.js"></script>
+    <script src="./service.js"></script>
+    
+</body>
+</html>
