@@ -1,0 +1,12 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("./Images/money\ heist\ background\ image.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
+}

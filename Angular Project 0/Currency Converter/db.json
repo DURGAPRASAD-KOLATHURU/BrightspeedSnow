@@ -1,0 +1,22 @@
+{
+  "user": [
+    {
+      "userName": "K Durga Prasad",
+      "userEmail": "durgakolathuru@gmail.com",
+      "userPassword": "12345",
+      "id": 1
+    },
+    {
+      "userName": "K Durga Prasad",
+      "userEmail": "durgakolathuru@gmail.com",
+      "userPassword": "12345",
+      "id": 2
+    },
+    {
+      "userName": "K Durga Prasad",
+      "userEmail": "kolathurudurgaprasad@gmail.com",
+      "userPassword": "123",
+      "id": 3
+    }
+  ]
+}
